@@ -3,6 +3,11 @@ import { nanoid } from "nanoid";
 import { motion } from "framer-motion";
 import { FiClipboard, FiTrash2 } from "react-icons/fi";
 import { BsCheck } from "react-icons/bs";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Features from "./components/Features";
+import HowToUse from "./components/HowToUse";
 
 const App = () => {
   const [secret, setSecret] = useState("");
@@ -33,16 +38,7 @@ const App = () => {
   return (
     <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
       {/* Header */}
-      <motion.header
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        className="mt-10 text-center"
-      >
-        <h1 className="text-4xl font-bold">Next.js Auth Secret Generator</h1>
-        <p className="text-lg mt-2 text-gray-200">
-          Generate secure secrets for your Next.js apps effortlessly.
-        </p>
-      </motion.header>
+      <Header />
 
       {/* Main Content */}
       <motion.main
@@ -146,9 +142,10 @@ const App = () => {
       </motion.main>
 
       {/* Footer */}
-      <footer className="mt-auto mb-6 text-gray-300 text-sm">
-        Built with ❤️ using React, Framer Motion, and Tailwind CSS
-      </footer>
+      <About />
+      <Features />
+      <HowToUse />
+      <Footer />
     </div>
   );
 };
