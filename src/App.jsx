@@ -142,11 +142,11 @@ const App = () => {
       </motion.main>
 
       {/* Footer */}
-      <About />
-      <Features />
-      <HowToUse />
-      <Footer />
     </div>
+    <About />
+    <Features />
+    <HowToUse />
+    <Footer />
   );
 };
 
