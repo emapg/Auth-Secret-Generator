@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
 import { motion } from "framer-motion";
-import { FiClipboard, FiClipboardCheck, FiTrash2 } from "react-icons/fi";
+import { FiClipboard, FiTrash2 } from "react-icons/fi";
+import { BsCheck } from "react-icons/bs";
 
 const App = () => {
   const [secret, setSecret] = useState("");
@@ -95,7 +96,7 @@ const App = () => {
               >
                 {copied ? (
                   <>
-                    <FiClipboardCheck className="mr-2" /> Copied!
+                    <BsCheck className="mr-2" /> Copied!
                   </>
                 ) : (
                   <>
